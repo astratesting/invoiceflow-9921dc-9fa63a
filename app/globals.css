@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('/fonts/Satoshi-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Archivo Black';
+    src: url('/fonts/ArchivoBlack-Regular.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  body {
+    @apply bg-near-black text-white font-satoshi;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-archivo;
+  }
+}
+
+@layer components {
+  .beam-bg {
+    background: linear-gradient(135deg, #0a0a0a 0%, #ff5722 50%, #e91e63 100%);
+  }
+
+  .btn-primary {
+    @apply bg-flame-orange hover:bg-flame-orange/90 text-white font-bold py-3 px-8 rounded-lg transition-all duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-vivid-magenta hover:bg-vivid-magenta/90 text-white font-bold py-3 px-8 rounded-lg transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-gray-900 border border-gray-800 rounded-xl p-6;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-flame-orange to-vivid-magenta;
+  }
+
+  .glow-orange {
+    box-shadow: 0 0 20px rgba(255, 87, 34, 0.5);
+  }
+
+  .glow-magenta {
+    box-shadow: 0 0 20px rgba(233, 30, 99, 0.5);
+  }
+
+  .glow-green {
+    box-shadow: 0 0 20px rgba(118, 255, 3, 0.5);
+  }
+}
